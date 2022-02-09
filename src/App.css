@@ -1,0 +1,122 @@
+.App {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.service-header{
+  opacity: 30%;
+}
+
+.choose-filter{
+  font-size: medium;
+  font-weight: 800;
+}
+
+.groupDataSection{
+
+  margin:auto;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-bottom: 3px solid #cae4de;
+  margin-bottom: .5rem;
+  
+}
+.groupData{
+  width: 80%;
+  padding: 0.5rem 0;
+}
+
+/* .service-group{
+  display: grid;
+  grid-row: 3;
+} */
+
+.service-button{
+
+    background-color: #15A983;
+    border-radius: 5px;
+    border-style: none;
+    box-sizing: border-box;
+    color: #FFFFFF;
+    cursor: pointer;
+    display: inline-block;
+    font-family: "Haas Grot Text R Web", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    height: 40px;
+    line-height: 20px;
+    list-style: none;
+    margin: 0;
+    outline: none;
+    padding: 10px 16px;
+    position: relative;
+    text-align: center;
+    text-decoration: none;
+    transition: color 100ms;
+    vertical-align: baseline;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    margin-left: .3rem;
+    margin-top: .3rem;
+    
+
+}
+.service-button:hover,
+.service-button :focus {
+  background-color: #008b69;
+}
+
+.data-list{
+  width: 80vw;
+}
+
+
+
+.list-table{
+  border-collapse: collapse;
+  width: 100%;
+}
+
+.table-head{
+  border-bottom: .5rem solid #15A983;
+  padding: 8px;
+}
+
+.table-body{
+  padding: 5px;
+  text-align: left;
+  border-bottom: 1px solid rgb(39, 39, 39);
+}
+.standart-credits{
+  text-align: center;
+}
+
+.select-button{
+  background-color: #1F5D6E;
+  border-style: none;
+  box-sizing: border-box;
+  color: #FFFFFF;
+  cursor: pointer;
+  display: inline-block;
+  font-family: "Haas Grot Text R Web", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  height: 40px;
+  line-height: 20px;
+  list-style: none;
+  margin: 0;
+  outline: none;
+  padding: 10px 16px;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  transition: color 100ms;
+  vertical-align: baseline;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
