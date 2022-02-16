@@ -8,6 +8,61 @@
   opacity: 30%;
 }
 
+.filter-section{
+  display: flex;
+  justify-content: space-between;
+}
+
+.view-all{
+    background-color: #15A983;
+    border-radius: 5px;
+    border-style: none;
+    box-sizing: border-box;
+    color: #FFFFFF;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 14px;
+    font-weight: 600;
+    height: 40px;
+    line-height: 20px;
+    list-style: none;
+    margin: 0;
+    padding: 10px 16px;
+    position: relative;
+    text-align: center;
+    text-decoration: none;
+    transition: color 100ms;
+    vertical-align: baseline;
+    user-select: none;
+    margin-left: .3rem;
+    margin-top: .3rem;
+}
+
+.view-all-2{
+  background-color: #d61900;
+  border-radius: 5px;
+  border-style: none;
+  box-sizing: border-box;
+  color: #FFFFFF;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 14px;
+  font-weight: 600;
+  height: 40px;
+  line-height: 20px;
+  list-style: none;
+  margin: 0;
+  padding: 10px 16px;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  transition: color 100ms;
+  vertical-align: baseline;
+  user-select: none;
+  margin-left: .3rem;
+  margin-top: .3rem;
+}
+
 .choose-filter{
   font-size: medium;
   font-weight: 800;
