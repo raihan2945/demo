@@ -10,8 +10,8 @@ function App() {
 
   // const [allGroupData, setAllGroupData] = useState();
 
-  const [singleG, setSingleG] = useState();
-  const [singleGN, setSingleGN] = useState();
+  // const [singleG, setSingleG] = useState();
+  // const [singleGN, setSingleGN] = useState();
 
   const [viewAll, setViewAll] = useState(false);
 
@@ -27,19 +27,24 @@ function App() {
 
         // console.log("data is : ", groupDatas);
 
-        setSingleG(groupDatas[0].doclist.docs);
-        setSingleGN(groupDatas[0].groupValue);
+        // setSingleG(groupDatas[0].doclist.docs);
+        // setSingleGN(groupDatas[0].groupValue);
       });
   }, []);
 
   // console.log("single g is : ", singleG);
 
   const setListAarray = (e) => {
+    if(e == "" || undefined){
+      setListData();
+      setGroupName();
+
+      return;
+    }
     const data = JSON.parse(e);
     setListData(data.doclist.docs);
     setGroupName(data.groupValue);
   };
-
 
   return (
     <div className="App">
@@ -49,10 +54,10 @@ function App() {
 
           <div className="filter-section">
             <div className="select Group">
-              <label for="tutorial_choice" className="choose-filter"></label>
+              <label for="tutorial_choice" className="choose-filter">Filter</label>
 
               <select onChange={(e) => setListAarray(e.target.value)}>
-                <option value="">Filter</option>
+                <option style={{backgroundColor:"red", color:"white"}} value="">No Filter</option>
                 {groupData &&
                   groupData.map((data) => {
                     return (
@@ -66,33 +71,23 @@ function App() {
                   })}
               </select>
             </div>
-
-            <button
-              onClick={() => setViewAll(!viewAll)}
-              className={viewAll ? "view-all-2" : "view-all"}
-            >
-              {viewAll ? "Close View All" : "View All Services"}
-            </button>
           </div>
         </div>
       </div>
 
-      {viewAll ? (
-        groupData.map((group) => {
+      {listData && groupName ? (
+        <DataList groupName={groupName} listData={listData} />
+      ) : (
+        groupData && groupData.map((group) => {
+          // console.log("I'm called");
           return (
             <DataList
+              key={group.groupValue}
               groupName={group.groupValue}
               listData={group.doclist.docs}
             />
           );
         })
-      ) : (
-        <DataList
-          groupName={groupName}
-          singleGN={singleGN}
-          listData={listData}
-          singleG={singleG}
-        />
       )}
     </div>
   );
